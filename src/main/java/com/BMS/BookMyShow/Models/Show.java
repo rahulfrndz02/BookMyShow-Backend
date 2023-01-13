@@ -14,7 +14,9 @@ import java.util.List;
 @Entity
 @Data
 @Slf4j
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "shows")
 public class Show {
 

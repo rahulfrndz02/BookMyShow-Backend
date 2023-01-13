@@ -10,6 +10,8 @@ import java.util.List;
 @Entity
 @Slf4j
 @Data
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tickets")
 public class Ticket {

@@ -10,7 +10,9 @@ import java.util.Date;
 @Entity
 @Data
 @Slf4j
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "show_seats")
 public class ShowSeats {
     @Id

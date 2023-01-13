@@ -9,7 +9,9 @@ import java.util.List;
 @Entity
 @Data
 @Slf4j
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "theater")
 public class Theater {
     @Id

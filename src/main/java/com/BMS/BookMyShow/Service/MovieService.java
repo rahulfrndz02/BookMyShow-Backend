@@ -1,5 +1,6 @@
 package com.BMS.BookMyShow.Service;
 
+import com.BMS.BookMyShow.Convertor.MovieConverter;
 import com.BMS.BookMyShow.Models.Movie;
 import com.BMS.BookMyShow.Repository.MovieRepository;
 import com.BMS.BookMyShow.RequestDto.MovieRequestDto;
@@ -16,12 +17,12 @@ public class MovieService {
 
     public String addMovie(MovieRequestDto movieRequestDto){
         try{
-        Movie movie = MovieConvertor.convertMovieDtoToEntity(movieRequestDto);
+        Movie movie = MovieConverter.convertMovieDtoToEntity(movieRequestDto);
         movieRepository.save(movie);
     }catch (Exception e){
-        log.info("createAuthor has caused an error");
-        return "Create author didn't work";
+        log.info("createMovie has caused an error");
+        return "Create Movie didn't work";
     }
-        return "Author created successfully";
+        return "Movie added successfully";
     }
 }

@@ -11,6 +11,8 @@ import java.util.Date;
 
 @Entity
 @Data
+@Builder
+@AllArgsConstructor
 @Slf4j
 @NoArgsConstructor
 @Table(name = "users")
