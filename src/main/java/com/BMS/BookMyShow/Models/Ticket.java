@@ -8,7 +8,6 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Slf4j
 @Data
 @Builder
 @AllArgsConstructor

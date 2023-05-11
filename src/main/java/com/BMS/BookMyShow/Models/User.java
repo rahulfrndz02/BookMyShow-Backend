@@ -5,15 +5,16 @@ import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Date;
+
 
 @Entity
 @Data
 @Builder
 @AllArgsConstructor
-@Slf4j
 @NoArgsConstructor
 @Table(name = "users")
 public class User {

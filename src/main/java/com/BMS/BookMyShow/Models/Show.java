@@ -2,18 +2,16 @@ package com.BMS.BookMyShow.Models;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.extern.slf4j.Slf4j;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Data
-@Slf4j
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,7 +23,10 @@ public class Show {
     private int id;
 
     private LocalDate showDate;
-    private LocalDateTime showTime;
+
+    private LocalTime showtime;
+
+    private double multiplier;
 
     @CreationTimestamp
     private Date createdOn;

@@ -8,7 +8,6 @@ import java.util.List;
 
 @Entity
 @Data
-@Slf4j
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -31,6 +30,6 @@ public class Theater {
 
     //db connection, parent = Theater, child = TheaterSeats
     @OneToMany(mappedBy = "theater", cascade = CascadeType.ALL)
-    private List<TheaterSeats> theaterSeatsList;
+    private List<TheaterSeats> theaterSeatsList; //this will be used in TheaterService layer
 
 }

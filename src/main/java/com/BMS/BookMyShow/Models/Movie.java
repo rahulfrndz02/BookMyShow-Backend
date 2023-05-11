@@ -1,15 +1,16 @@
 package com.BMS.BookMyShow.Models;
 
 import jakarta.persistence.*;
-import lombok.*;
-import lombok.extern.slf4j.Slf4j;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
 
 @Entity
 @Data //provide getter and setter also
-@Slf4j
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

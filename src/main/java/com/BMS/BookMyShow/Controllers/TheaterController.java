@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("theater")
+@RequestMapping("/theater")
 public class TheaterController {
 
     @Autowired
     TheaterService theaterService;
 
-    @PostMapping("/addTheater")
+    @PostMapping("/add")
     public ResponseEntity<String> addTheater(@RequestBody TheaterRequestDto theaterRequestDto){
-        theaterService.addTheater(theaterRequestDto);
+        theaterService.createTheater(theaterRequestDto);
         return new ResponseEntity<>("Theater added successfully", HttpStatus.CREATED);
     }
 }

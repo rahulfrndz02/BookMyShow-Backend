@@ -8,7 +8,6 @@ public class MovieConverter {
         Movie movie = Movie.builder().movieName(movieRequestDto.getMovieName()).
                 duration(movieRequestDto.getDuration()).
                 releaseDate(movieRequestDto.getReleaseDate()).build();
-
         return movie;
     }
 }
