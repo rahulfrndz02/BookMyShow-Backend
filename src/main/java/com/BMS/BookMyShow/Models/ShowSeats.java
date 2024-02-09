@@ -26,7 +26,7 @@ public class ShowSeats {
 
     private Date bookedAt; //when the ticket is booked not automatically, no annotation
 
-    //db connection with show, Parent = Ticket, Child = ShowSeats
+    //db connection with Ticket, Parent = Ticket, Child = ShowSeats
     @ManyToOne
     @JoinColumn
     private Ticket ticket;

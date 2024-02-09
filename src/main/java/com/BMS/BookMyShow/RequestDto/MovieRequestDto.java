@@ -9,6 +9,6 @@ public class MovieRequestDto {
 
     private String MovieName;
     private int duration;
-    private Date ReleaseDate;
+    private String ReleaseDate;
 
 }

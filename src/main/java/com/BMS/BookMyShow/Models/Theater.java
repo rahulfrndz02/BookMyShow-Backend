@@ -2,7 +2,7 @@ package com.BMS.BookMyShow.Models;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
@@ -24,11 +24,11 @@ public class Theater {
     private String address;
 
 
-    //db connection, parent = Theater, child = Show
+    //db connection with show, parent = Theater, child = Show
     @OneToMany(mappedBy = "theater", cascade = CascadeType.ALL)
     private List<Show> listOfShows;
 
-    //db connection, parent = Theater, child = TheaterSeats
+    //db connection with theater-seats, parent = Theater, child = TheaterSeats
     @OneToMany(mappedBy = "theater", cascade = CascadeType.ALL)
     private List<TheaterSeats> theaterSeatsList; //this will be used in TheaterService layer
 

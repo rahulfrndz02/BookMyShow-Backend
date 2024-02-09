@@ -2,14 +2,11 @@ package com.BMS.BookMyShow.Models;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.extern.slf4j.Slf4j;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Date;
-
 
 @Entity
 @Data
@@ -35,7 +32,7 @@ public class User {
     @Temporal(value = TemporalType.TIMESTAMP)
     private Date updatedOn;
 
-    //db connection, parent = User, child = ticket
+    //db connection with ticket, parent = User, child = ticket
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL) //parent of ticket
     private List<Ticket> listOfTickets;
 }

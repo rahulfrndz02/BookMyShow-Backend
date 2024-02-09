@@ -2,7 +2,7 @@ package com.BMS.BookMyShow.Models;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Ticket {
     private Date booked_at;
 
 
-    //db connection with Ticket-User
+    //db connection with User, parent- user, child - ticket
     @ManyToOne
     @JoinColumn
     private User user;

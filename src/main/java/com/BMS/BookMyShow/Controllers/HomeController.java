@@ -16,4 +16,5 @@ public class HomeController {
     public String index1() {
         return "Greetings from Spring Boot!";
     }
+
 }

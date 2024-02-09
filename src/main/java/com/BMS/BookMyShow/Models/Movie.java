@@ -1,17 +1,17 @@
 package com.BMS.BookMyShow.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
 import java.util.List;
 
 @Entity
 @Data //provide getter and setter also
-@Builder
+@Builder // produces complex builder APIs for our classes.
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "movies")
@@ -25,9 +25,10 @@ public class Movie {
 
     private int duration;
 
-    private Date releaseDate;
+    private String releaseDate;
 
     //db connection, parent = movie, child = show
+    @JsonIgnore  //use this or create mvoiedto to get all movie list as entity
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
     private List<Show> listOfShows;  //one movie can have multiple shows
 

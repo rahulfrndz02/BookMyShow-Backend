@@ -25,11 +25,12 @@ public class TheaterSeats {
 
     private int rate;
 
-    //db connection, parent = Theater, child = theaterSeats
+    //db connection with theater, parent = Theater, child = theaterSeats
     @ManyToOne
     @JoinColumn
-    private Theater theater;
+    private Theater theater; //this is the parent
 
+    //all args constructor
     public TheaterSeats(String seatNo,SeatType seatType,int rate){
         this.seatNo = seatNo;
         this.seatType = seatType;

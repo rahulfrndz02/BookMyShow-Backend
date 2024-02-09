@@ -34,7 +34,7 @@ public class Show {
     @UpdateTimestamp
     private Date updatedOn;
 
-    //db connection with movie
+    //db connection with movie , parent - Movie, child - show
     @ManyToOne
     @JoinColumn
     private Movie movie;  //multiple shows have a movie

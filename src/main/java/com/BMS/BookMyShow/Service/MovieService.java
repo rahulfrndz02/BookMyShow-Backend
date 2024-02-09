@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Slf4j //for log
 public class MovieService {
@@ -24,5 +26,10 @@ public class MovieService {
         return "Create Movie didn't work";
     }
         return "Movie added successfully";
+    }
+
+    public List<Movie> getAllMovie(){
+        List<Movie> all = movieRepository.findAll();
+        return all;
     }
 }
